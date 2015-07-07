@@ -158,7 +158,6 @@
       
       if(index < 0){
         start = -index;
-        end += index;
       } else {
         end -= index;
       }
