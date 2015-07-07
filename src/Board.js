@@ -152,15 +152,14 @@
     //
     // test if a specific major diagonal on this board contains a conflict
     hasMajorDiagonalConflictAt: function(majorDiagonalColumnIndexAtFirstRow) {
-      var index = majorDiagonalColumnIndexAtFirstRow;
+      var index = majorDiagonalColumnIndexAtFirstRow; // -1
       var start = 0;
-      var end = this.rows().length - 1;
+      var end = this.rows().length - 1; // 3
       
       if(index < 0){
-        start = -index;
-        end += index;
+        start = -index; // 1
       } else {
-        end -= index;
+        end = end - index;
       }
       
       var counter = 0;
@@ -191,7 +190,6 @@
           conflicted = true;
         }
       }
-
       return conflicted;
     },
 
